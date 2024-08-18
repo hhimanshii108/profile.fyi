@@ -1,6 +1,6 @@
 import React from "react";
 import { useCartContext } from "../context/cartContext";
-import CartItem from "./CartItem";
+import CartItem from "../components/CartItem";
 import { NavLink } from "react-router-dom";
 import ShoppingCartCheckoutIcon from "@mui/icons-material/ShoppingCartCheckout";
 import FormatPrice from "../helpers/FormatPrice";
@@ -8,7 +8,7 @@ import FormatPrice from "../helpers/FormatPrice";
 const Cart = () => {
   const { cart, clearCart, total_price, shipping_fee } = useCartContext();
   console.log(cart);
-  if (cart.length === 0)
+  if (cart && cart.length === 0)
     return (
       <>
         <div className="w-full h-screen flex flex-col items-center justify-center gap-8">
@@ -59,7 +59,7 @@ const Cart = () => {
             Clear Cart
           </button>
         </div>
-        <div className="w-3/4 flex justify-center mt-2">
+        <div className="w-3/4 flex justify-center mt-2 mb-10">
           <div className="w-72">
             <div className="grid grid-rows-3 gap-2 bg-gray-100 p-2 ">
               <div className="grid grid-cols-2 gap-4">

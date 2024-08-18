@@ -2,15 +2,15 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import { useEffect } from "react";
 import { useProductContext } from "../context/productContext";
-import PageNavigation from "./PageNavigation";
-import ProductImages from "./ProductImages";
+import PageNavigation from "../components/PageNavigation";
+import ProductImages from "../components/ProductImages";
 import FormatPrice from "../helpers/FormatPrice";
 import LocalShippingIcon from "@mui/icons-material/LocalShipping";
 import PublishedWithChangesIcon from "@mui/icons-material/PublishedWithChanges";
 import SecurityIcon from "@mui/icons-material/Security";
 import EmojiEventsIcon from "@mui/icons-material/EmojiEvents";
-import Star from "./Star";
-import AddToCart from "./AddToCart";
+import Star from "../components/Star";
+import AddToCart from "../components/AddToCart";
 import HashLoader from "react-spinners/HashLoader";
 //API
 const API = "https://api.pujakaitem.com/api/products";
@@ -53,7 +53,7 @@ const SingleProduct = () => {
   return (
     <>
       <PageNavigation title={name} />
-      <div className="w-full px-20 text-sm">
+      <div className="w-full px-20 text-sm mb-8">
         <div className="grid gap-16 grid-cols-2">
           <div className="flex justify-center items-center">
             <ProductImages images={image} />

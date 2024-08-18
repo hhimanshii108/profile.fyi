@@ -3,10 +3,19 @@ import reducer from "../reducer/cartReducer";
 
 const CartContext = createContext();
 
+// const getLocalCartData = () => {
+//   let newCartData = localStorage.getItem("cartValue");
+//   if (newCartData && newCartData.length === 0) {
+//     return [];
+//   } else {
+//     return JSON.parse(newCartData);
+//   }
+// };
+
 const getLocalCartData = () => {
   let newCartData = localStorage.getItem("cartValue");
-  if (newCartData.length === 0) {
-    return [];
+  if (!newCartData) {
+    return []; // Return an empty array if no data is found
   } else {
     return JSON.parse(newCartData);
   }

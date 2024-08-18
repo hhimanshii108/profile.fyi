@@ -11,7 +11,7 @@ const Sort = () => {
           <ViewCompactIcon className="bg-gray-200" />
         </button>
       </div>
-      <div>{products.length} Products Available </div>
+      <div> Products Available </div>
       <div className="p-1 cursor-pointer">
         <form action="#">
           <label htmlFor="sort"></label>

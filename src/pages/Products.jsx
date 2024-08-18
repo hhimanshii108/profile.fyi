@@ -1,8 +1,8 @@
 import React from "react";
 import { useProductContext } from "../context/productContext";
-import FilterSection from "./FilterSection";
-import Sort from "./Sort";
-import ProductList from "./ProductList";
+import FilterSection from "../components/FilterSection";
+import Sort from "../components/Sort";
+import ProductList from "../components/ProductList";
 import HashLoader from "react-spinners/HashLoader";
 
 const Products = () => {
